@@ -12,24 +12,25 @@ Module.register("compliments", {
 	defaults: {
 		compliments: {
 			anytime: [
-				"Hey there sexy!"
+				"每天好心情~"
 			],
 			morning: [
-				"Good morning, handsome!",
-				"Enjoy your day!",
-				"How was your sleep?"
+				"早上好！",
+				"快乐每一天！",
+				"睡得怎么样？"
 			],
 			afternoon: [
-				"Hello, beauty!",
-				"You look sexy!",
-				"Looking good today!"
+				"下午好！",
+				"看起来精神不错哦！",
+				"今天气色不错哦！"
 			],
 			evening: [
-				"Wow, you look hot!",
-				"You look nice!",
-				"Hi, sexy!"
+				"晚上好！",
+				"忙碌的一天就要结束了！",
+				"心情怎么样？"
 			]
 		},
+		locale:config.locale,
 		updateInterval: 30000,
 		remoteFile: null,
 		fadeSpeed: 4000,
@@ -100,6 +101,7 @@ Module.register("compliments", {
 	 * return compliments Array<String> - Array with compliments for the time of the day.
 	 */
 	complimentArray: function() {
+		moment.locale(this.config.locale);
 		var hour = moment().hour();
 		var compliments;
 
