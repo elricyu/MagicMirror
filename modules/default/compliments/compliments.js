@@ -101,7 +101,7 @@ Module.register("compliments", {
 	 * return compliments Array<String> - Array with compliments for the time of the day.
 	 */
 	complimentArray: function() {
-		moment.locale(this.config.locale);
+		moment.locale(this.config.language);
 		var hour = moment().hour();
 		var compliments;
 

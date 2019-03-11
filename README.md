@@ -43,7 +43,7 @@ Note that you will need to install the latest full version of Raspbian, **don't 
 Execute the following command on your Raspberry Pi to install MagicMirror²:
 
 ```bash
-bash -c "$(curl -sL https://raw.githubusercontent.com/MichMich/MagicMirror/master/installers/raspberry.sh)"
+bash -c "$(curl -sL https://raw.githubusercontent.com/elricyu/MagicMirror/master/installers/raspberry.sh)"
 ```
 
 #### Manual Installation
