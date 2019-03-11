@@ -30,7 +30,7 @@ Module.register("compliments", {
 				"心情怎么样？"
 			]
 		},
-		locale:config.locale,
+		locale:config.language,
 		updateInterval: 30000,
 		remoteFile: null,
 		fadeSpeed: 4000,
@@ -101,7 +101,7 @@ Module.register("compliments", {
 	 * return compliments Array<String> - Array with compliments for the time of the day.
 	 */
 	complimentArray: function() {
-		moment.locale(this.config.language);
+		moment.locale(this.config.locale);
 		var hour = moment().hour();
 		var compliments;
 
